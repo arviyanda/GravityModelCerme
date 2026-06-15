@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Gravity Model Analysis | Residential Attractiveness — Kecamatan Cerme, Gresik</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Gravity model analysis of residential location attractiveness for Kecamatan Cerme, Kabupaten Gresik, Jawa Timur — a companion study to the MCDA residential suitability analysis."/>
+<style>
+  :root {
+    --accent: #ff5722;
+    --accent-dark: #e64a19;
+    --bg: #f8fafc;
+    --panel: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: rgba(15, 23, 42, 0.08);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text); background: var(--bg); line-height: 1.6;
+  }
+  a { color: var(--accent-dark); }
+
+  /* ---- Nav ---- */
+  header.nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 28px;
+  }
+  header.nav .brand { font-weight: 800; font-size: 14px; letter-spacing: 0.02em; }
+  header.nav .brand span { color: var(--accent); }
+  header.nav nav a {
+    margin-left: 18px; font-size: 13px; font-weight: 600; text-decoration: none; color: var(--text);
+  }
+  header.nav nav a:hover { color: var(--accent); }
+  @media (max-width: 720px) {
+    header.nav nav a { margin-left: 10px; font-size: 11px; }
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    padding: 56px 28px 40px; text-align: center;
+    background: linear-gradient(160deg, #0f172a 0%, #1e293b 60%, #312018 100%);
+    color: #fff;
+  }
+  .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(28px, 5vw, 46px); margin: 0 0 16px; font-weight: 800; line-height: 1.2; }
+  .hero p { max-width: 640px; margin: 0 auto; color: #cbd5e1; font-size: 15px; }
+
+  /* ---- Sections ---- */
+  section { padding: 48px 28px; max-width: 1200px; margin: 0 auto; }
+  section h2 { font-size: 26px; margin: 0 0 8px; font-weight: 800; }
+  section .section-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  section .lead { color: var(--muted); font-size: 14px; max-width: 760px; margin-bottom: 24px; }
+  .alt-bg { background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  /* ---- Embeds ---- */
+  .embed-frame {
+    width: 100%; height: 720px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.08);
+  }
+  .embed-frame iframe { width: 100%; height: 100%; border: none; }
+  .embed-actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .embed-actions a { font-size: 13px; font-weight: 600; }
+
+  footer { padding: 32px 28px; text-align: center; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">Gravity<span>Model</span> · Cerme</div>
+  <nav>
+    <a href="#map">RAI Map</a>
+    <a href="#simulation">Trip Flow Map</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">MCDA Companion Study &middot; Kecamatan Cerme, Kabupaten Gresik, Jawa Timur</div>
+  <h1>Gravity Model Analysis of<br>Residential Location Attractiveness</h1>
+  <p>Explore the Residential Attractiveness Index (RAI) across 288 analysis zones, and the simulated residential trip flows across Kecamatan Cerme.</p>
+</div>
+
+<section id="map">
+  <div class="section-eyebrow">Interactive Map</div>
+  <h2>Residential Attractiveness Index (RAI)</h2>
+  <p class="lead">Toggle layers for the analysis grid (colored by RAI or any model component), desa population, road network, main routes, and zone-to-zone trip flows.</p>
+  <div class="embed-frame">
+    <iframe src="results.html" loading="lazy" title="Interactive RAI results map"></iframe>
+  </div>
+  <div class="embed-actions">
+    <a href="results.html" target="_blank">Open full-screen &#8599;</a>
+  </div>
+</section>
+
+<section id="simulation" class="alt-bg">
+  <div class="section-eyebrow">Agent Simulation</div>
+  <h2>Residential Trip Flow Map</h2>
+  <p class="lead">An animated simulation of sampled trip-making agents moving between origin and destination zones, illustrating how modeled flows distribute across the road network.</p>
+  <div class="embed-frame">
+    <iframe src="Gravity_Trip_Simulation.html" loading="lazy" title="Trip flow simulation"></iframe>
+  </div>
+  <div class="embed-actions">
+    <a href="Gravity_Trip_Simulation.html" target="_blank">Open full-screen &#8599;</a>
+  </div>
+</section>
+
+<footer>
+  Gravity Model Analysis — Kecamatan Cerme, Kabupaten Gresik, Jawa Timur &middot; Companion to the MCDA Residential Area Suitability study.
+</footer>
+
+</body>
+</html>
